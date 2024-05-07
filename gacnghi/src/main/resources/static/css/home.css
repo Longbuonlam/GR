@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+    background-image: url();
+    background-size: auto;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 65px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    justify-content: flex-end;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li:hover{
+    background: #2691d9;
+    border-radius: 3px;
+    height: 65px;
+}
+
+.dropdown-menu{
+    display: none;
+
+}
+
+.dropdown-menu ul{
+    display: none;
+    margin-top: -5px;
+}
+
+nav ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    background: #2691d9;
+    margin-top: -15px;
+    width: 205px;         /*Tuy chinh do rong cua dropdown-menu de phu hop*/
+}
+
+nav ul li:hover .dropdown-menu ul{
+    display: block;
+}
+
+nav ul li:hover .dropdown-menu ul li{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+nav ul li:hover .dropdown-menu ul li:last-child{
+    border-bottom: none;
+}
+
+nav ul li:hover .dropdown-menu ul li a:hover{
+    color: #71c0f5;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar .search-icon {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
