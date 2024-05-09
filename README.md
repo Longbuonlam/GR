@@ -1,1 +1,2 @@
-# GR
+# Nghien cuu tot nghiep (HUST)
+---
