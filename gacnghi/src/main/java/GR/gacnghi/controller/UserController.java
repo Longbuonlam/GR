@@ -2,27 +2,20 @@ package GR.gacnghi.controller;
 
 import GR.gacnghi.entity.User;
 import GR.gacnghi.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/SignUpPage")
-public class UserController {
-    private UserService userService;
-
-    public UserController(UserService theUserService) {
-        userService = theUserService;
-    }
+public class UserController{
+    @Autowired
+    private UserService service;
 
     @PostMapping("/save")
-    public String saveUser(@ModelAttribute("user") User theUser) {
-
-        // save the user
-        userService.save(theUser);
-
-        // use a redirect to prevent duplicate submissions
-        return "redirect: LoginPage";
+    public String addUser(@ModelAttribute User user) {
+        service.save(user);
+        return "redirect:/gacnghi.login";
     }
+    
 }

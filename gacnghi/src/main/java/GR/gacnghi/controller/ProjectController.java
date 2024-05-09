@@ -1,31 +1,33 @@
 package GR.gacnghi.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-public class ProjectRestController {
-    @RequestMapping("/LoginPage")
+public class ProjectController {
+    @GetMapping("/gacnghi.login")
     public String LoginPage(){
         return "login";
     }
 
-    @RequestMapping("/Home")
+    @GetMapping("/Home")
     public String HomeNotSignIn(){
         return "homeNotSignedIn";
     }
 
-    @RequestMapping("/HomePage")
+    @GetMapping("/gacnghi.vn")
     public String HomeSignIn(){
         return "homeSignedIn";
     }
 
-    @RequestMapping("/SignupPage")
+    @GetMapping("/gacnghi.signup")
     public String SignUpPage(){
         return "signup";
     }
 
-
+    @PostMapping("/login")
+    public String LoginSuccess(){
+        return "redirect:/gacnghi.vn";
+    }
 }

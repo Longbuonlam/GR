@@ -1,9 +1,10 @@
 package GR.gacnghi.service;
 
 import GR.gacnghi.entity.User;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
 
+@Service
 public interface UserService {
 
     //save user to the database
