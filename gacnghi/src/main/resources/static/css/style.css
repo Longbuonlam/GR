@@ -35,7 +35,7 @@ form .txt_field{
 }
 
 .txt_field input{
-    width: 100%;
+    width: calc(100%-30px);
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
@@ -133,4 +133,13 @@ input[type = "submit"]:hover{
 
 .term a{
     color: rgb(17, 107, 143);
+}
+
+.txt_field img{
+    position: absolute;
+    margin-left: 30%;
+    top: 85%;
+    width: 20px;
+    cursor: pointer;
+    transform: translateY(-110%);
 }
