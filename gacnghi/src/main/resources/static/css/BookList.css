@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+    background-image: url();
+    background-size: auto;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 65px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    justify-content: flex-end;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 1.03em;
+}
+
+nav ul li:hover{
+    background: #2691d9;
+    border-radius: 3px;
+    height: 65px;
+}
+
+.dropdown-menu{
+    display: none;
+
+}
+
+.dropdown-menu ul{
+    display: none;
+    margin-top: -5px;
+}
+
+nav ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    background: #2691d9;
+    margin-top: -15px;
+    width: 210px;         /*Tuy chinh do rong cua dropdown-menu de phu hop*/
+}
+
+nav ul li:hover .dropdown-menu ul{
+    display: block;
+}
+
+nav ul li:hover .dropdown-menu ul li{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+nav ul li:hover .dropdown-menu ul li:last-child{
+    border-bottom: none;
+}
+
+nav ul li:hover .dropdown-menu ul li a:hover{
+    color: #71c0f5;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-left: 180px;    /*Tuy chinh search-bar ra xa bao nhieu de phu hop*/
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar .search-icon {
+    width: 20px; 
+    height: auto; 
+    cursor: pointer; 
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiều cao tối đa của container là chiều cao của màn hình */
+}
+
+.table {
+    margin-top: -550px; /* Điều chỉnh giảm khoảng cách từ trên xuống */
+    width: 40%; 
+    width: 1000px; /* Chiều rộng cố định */
+    height: 60px; /* Chiều cao cố định */
+}
+
+.table tbody td {
+    /* Đặt độ rộng của các cột trong phần thân bảng */
+    width: 20%; /* Ví dụ: mỗi cột chiếm 20% chiều rộng của bảng */
+}
+
+/* Định dạng các hàng xen kẽ màu sắc */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f3f3f3;
+}
+
+/* Hiệu ứng hover cho các hàng */
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Định dạng tiêu đề cột */
+.table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    border-color: #343a40;
+}
+
+.container .table tbody tr {
+    background-color: #e9ecef; /* Màu xám cho dòng chứa nút */
+}
+
+/* Định dạng nút và biểu tượng */
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #ffffff;
+}
+
+.fa-pen-to-square, .fa-trash {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.btn{
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Thêm hiệu ứng chuyển đổi cho màu sắc */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #495057; /* Màu nền khi di chuột qua */
+    border-color: #495057; /* Màu viền khi di chuột qua */
+    color: #ffffff; /* Màu chữ khi di chuột qua */
+}
+
+.fa-solid{
+    cursor: pointer;
+}
+
+.logout {
+    margin-left: 40px;
+}

@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+    background-image: url();
+    background-size: auto;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 65px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    justify-content: flex-end;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 1.03em;
+}
+
+nav ul li:hover{
+    background: #2691d9;
+    border-radius: 3px;
+    height: 65px;
+}
+
+.dropdown-menu{
+    display: none;
+
+}
+
+.dropdown-menu ul{
+    display: none;
+    margin-top: -5px;
+}
+
+nav ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    background: #2691d9;
+    margin-top: -15px;
+    width: 190px;         /*Tuy chinh do rong cua dropdown-menu de phu hop*/
+}
+
+nav ul li:hover .dropdown-menu ul{
+    display: block;
+}
+
+nav ul li:hover .dropdown-menu ul li{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+nav ul li:hover .dropdown-menu ul li:last-child{
+    border-bottom: none;
+}
+
+nav ul li:hover .dropdown-menu ul li a:hover{
+    color: #71c0f5;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-left: 210px;    /*Tuy chinh search-bar ra xa bao nhieu de phu hop*/
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar .search-icon {
+    width: 20px; 
+    height: auto; 
+    cursor: pointer; 
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;  
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: calc(100%-30px);
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+input[type = "submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    margin: 30px 0;
+}
+
+input[type = "submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+

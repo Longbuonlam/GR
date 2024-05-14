@@ -46,6 +46,7 @@ nav ul li a{
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    font-size: 1.03em;
 }
 
 nav ul li:hover{
@@ -69,7 +70,7 @@ nav ul li:hover .dropdown-menu{
     position: absolute;
     background: #2691d9;
     margin-top: -15px;
-    width: 205px;         /*Tuy chinh do rong cua dropdown-menu de phu hop*/
+    width: 190px;         /*Tuy chinh do rong cua dropdown-menu de phu hop*/
 }
 
 nav ul li:hover .dropdown-menu ul{
@@ -96,7 +97,7 @@ nav ul li:hover .dropdown-menu ul li a:hover{
 .search-bar{
     display: flex;
     align-items: center;
-    margin-left: 60px;
+    margin-left: 210px;    /*Tuy chinh search-bar ra xa bao nhieu de phu hop*/
     margin-top: 10px;
 }
 
@@ -108,13 +109,17 @@ nav ul li:hover .dropdown-menu ul li a:hover{
 }
 
 .search-bar .search-icon {
-    width: 20px;
-    height: auto;
-    cursor: pointer;
+    width: 20px; 
+    height: auto; 
+    cursor: pointer; 
 }
 
 .welcome {
     text-align: center;
     margin-top: 20px;
     font-size: 1.2em;
+}
+
+.logout {
+    margin-left: 40px;
 }

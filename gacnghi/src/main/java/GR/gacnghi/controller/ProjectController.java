@@ -25,6 +25,10 @@ public class ProjectController {
     public String SignUpPage(){
         return "signup";
     }
+    @GetMapping("/gacnghi.admin")
+    public String AdminHome(){
+        return "admin";
+    }
 
     @PostMapping("/login")
     public String LoginSuccess(){

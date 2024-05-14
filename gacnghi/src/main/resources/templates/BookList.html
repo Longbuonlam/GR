@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/BookList.css">
+    <script src="https://kit.fontawesome.com/0faddc1af8.js" crossorigin="anonymous"></script>
+    <title>Gác Nghỉ</title>
+</head>
+<body>
+<nav>
+    <label class = "logo">Gác Nghỉ</label>
+    <ul>
+        <li><a href="#">Tài khoản</a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="UserList.html">Người dùng</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Kho sách</a></li>
+        <li><a href="#">Thêm Sách</a></li>
+        <li><a href="#">Diễn Đàn</a></li>
+    </ul>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <img src="/images/search.png" alt="Search Icon" class="search-icon">
+    </div>
+    <div>
+        <ul>
+            <li><a href="gacnghi.login">Đăng xuất</a>
+        </ul>
+    </div>
+</nav>
+
+<div class="welcome">
+    <h1>Danh sách thêm</h1>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="b :${book}">
+            <td th:text="${b.id}"></td>
+            <td th:text="${b.name}"></td>
+            <td th:text="${b.author}"></td>
+            <td th:text="${b.price}"></td>
+            <td><a class="btn" th:href="@{/mylist/{id}(id=${b.id})}">Thêm vào Kho Sách</a>
+                <a style="color:blue" th:href="@{/editBook/{id}(id=${b.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>
+                <a style="color:red" th:href="@{/deleteBook/{id}(id=${b.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
+            </td> </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
