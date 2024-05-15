@@ -34,8 +34,8 @@ public class UserController{
         return "UserEdit";
     }
 
-    @PostMapping("/editUser")
-    public String EditUser(@ModelAttribute User user) {
+    @PostMapping("/saveEditUser")
+    public String saveEditUser(@ModelAttribute User user) {
         service.save(user);
         return "redirect:/gacnghi.admin.user_list";
     }

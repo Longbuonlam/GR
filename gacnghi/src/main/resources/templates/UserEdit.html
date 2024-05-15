@@ -35,8 +35,8 @@
 </nav>
 
 <div class = "center">
-    <h1>Thêm sách</h1>
-    <form th:action="@{/editUser}" method="post" th:object="${user}">
+    <h1>Edit User</h1>
+    <form th:action="@{/saveEditUser}" method="post" th:object="${user}">
         <input type="hidden" name="id" th:value="${user.id}"/>
         <div class = "txt_field">
             <input type = "text" name = "name" th:value="${user.name}" required>
