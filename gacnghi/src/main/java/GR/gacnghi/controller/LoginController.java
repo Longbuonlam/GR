@@ -17,13 +17,14 @@ public class LoginController {
     @GetMapping("/login")
     public String loginUser(@ModelAttribute User user){
         User oauthUser = service.login(user.getName(), user.getPassword());
-        System.out.print(oauthUser);
+        System.out.print(oauthUser + " logged in!");
         System.out.println();
-        if(Objects.nonNull(oauthUser))
-        {
-
-            return "redirect:/gacnghi.vn";
-
+        if(Objects.nonNull(oauthUser) && "Enable".equals(oauthUser.getStatus())){
+            if ("ADMIN".equals(oauthUser.getRole())) {
+                return "redirect:/gacnghi.admin";
+            }else {
+                return "redirect:/gacnghi.vn";
+            }
 
         } else {
             return "redirect:/gacnghi.login";

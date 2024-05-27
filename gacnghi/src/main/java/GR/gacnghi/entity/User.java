@@ -19,15 +19,23 @@ public class User {
     @Column(name="password")
     private String password;
 
+    @Column(name="status")
+    private String status;
+
+    @Column(name="role")
+    private String role;
+
     public User(){
         super();
     }
 
     //define constructors
-    public User(String name, String email, String password) {
+    public User(String name, String email, String password, String status, String role) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.status = status;
+        this.role = role;
     }
 
     //define getter,setter
@@ -63,6 +71,22 @@ public class User {
         this.password = password;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     //define toString() method
     @Override
     public String toString() {
@@ -71,6 +95,8 @@ public class User {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", status='" + status + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 

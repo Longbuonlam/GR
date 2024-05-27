@@ -53,6 +53,16 @@
             <span></span>
             <label>Password</label>
         </div>
+        <div class = "txt_field">
+            <input type = "text" name = "status" th:value="${user.status}" required>
+            <span></span>
+            <label>Status</label>
+        </div>
+        <div class = "txt_field">
+            <input type = "text" name = "role" th:value="${user.role}" required>
+            <span></span>
+            <label>Role</label>
+        </div>
         <input type = "submit" value = "Submit">
 
     </form>

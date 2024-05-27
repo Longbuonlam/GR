@@ -17,7 +17,10 @@ public class UserController{
 
     @PostMapping("/save")
     public String addUser(@ModelAttribute User user) {
+        user.setRole("USER");
+        user.setStatus("Enable");
         service.save(user);
+        System.out.println("Create new user: " + user);
         return "redirect:/gacnghi.login";
     }
 
