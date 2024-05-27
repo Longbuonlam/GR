@@ -30,8 +30,5 @@ public class ProjectController {
         return "admin";
     }
 
-    @PostMapping("/login")
-    public String LoginSuccess(){
-        return "redirect:/gacnghi.vn";
-    }
+
 }
