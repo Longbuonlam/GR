@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +11,11 @@
 <nav>
     <label class = "logo">Gác Nghỉ</label>
     <ul>
-        <li><a href="#">Tài khoản</a>
+        <li><a href="#">Chỉnh sửa</a>
             <div class="dropdown-menu">
                 <ul>
-                    <li><a href="#">Người dùng</a></li>
-                    <li><a href="#">Admin</a></li>
+                    <li><a href="gacnghi.admin.user_list">Người dùng</a></li>
+                    <li><a href="gacnghi.admin.book_list">Thư viện</a></li>
                 </ul>
             </div>
         </li>
@@ -35,24 +35,35 @@
 </nav>
 
 <div class = "center">
-    <h1>Thêm sách</h1>
-    <form method = "post">
+    <h1>Edit Book</h1>
+    <form th:action="@{/saveBookUser}" method="post" th:object="${book}">
+        <input type="hidden" name="id" th:value="${book.id}"/>
         <div class = "txt_field">
-            <input type = "text" required>
+            <input type = "text" name = "title" th:value="${book.title}" required>
             <span></span>
-            <label>Name</label>
+            <label >Title</label>
         </div>
         <div class = "txt_field">
-            <input type = "text" required>
+            <input type = "text" name = "author" th:value="${book.author}" required>
             <span></span>
             <label>Author</label>
         </div>
         <div class = "txt_field">
-            <input type = "text" required>
+            <input type = "text" name = "description" th:value="${book.description}" required>
             <span></span>
-            <label>Price</label>
+            <label>Description</label>
         </div>
-        <input type = "submit" value = "Submit" href="Homepage.html">
+        <div class = "txt_field">
+            <input type = "text" name = "status" th:value="${book.status}" required>
+            <span></span>
+            <label>Status</label>
+        </div>
+        <div class = "txt_field">
+            <input type = "text" name = "pathToImage" th:value="${book.image}" required>
+            <span></span>
+            <label>Path to Image</label>
+        </div>
+        <input type = "submit" value = "Submit">
 
     </form>
 </div>

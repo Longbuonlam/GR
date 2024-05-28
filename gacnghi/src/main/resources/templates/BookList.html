@@ -12,11 +12,11 @@
 <nav>
     <label class = "logo">Gác Nghỉ</label>
     <ul>
-        <li><a href="#">Tài khoản</a>
+        <li><a href="#">Chỉnh sửa</a>
             <div class="dropdown-menu">
                 <ul>
-                    <li><a href="UserList.html">Người dùng</a></li>
-                    <li><a href="#">Admin</a></li>
+                    <li><a href="gacnghi.admin.user_list">Người dùng</a></li>
+                    <li><a href="gacnghi.admin.book_list">Thư viện</a></li>
                 </ul>
             </div>
         </li>
@@ -36,7 +36,7 @@
 </nav>
 
 <div class="welcome">
-    <h1>Danh sách thêm</h1>
+    <h1>Thư Viện</h1>
 </div>
 
 <div class="container">
@@ -44,21 +44,19 @@
         <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Name</th>
+            <th scope="col">Title</th>
             <th scope="col">Author</th>
-            <th scope="col">Price</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="b :${book}">
-            <td th:text="${b.id}"></td>
-            <td th:text="${b.name}"></td>
-            <td th:text="${b.author}"></td>
-            <td th:text="${b.price}"></td>
-            <td><a class="btn" th:href="@{/mylist/{id}(id=${b.id})}">Thêm vào Kho Sách</a>
-                <a style="color:blue" th:href="@{/editBook/{id}(id=${b.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>
-                <a style="color:red" th:href="@{/deleteBook/{id}(id=${b.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
+        <tr th:each="book :${book}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.author}"></td>
+            <td>
+                <a style="color:blue" th:href="@{/editBook/{id}(id=${book.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>
+                <a style="color:red" th:href="@{/deleteBook/{id}(id=${book.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
             </td> </tr>
         </tbody>
     </table>
