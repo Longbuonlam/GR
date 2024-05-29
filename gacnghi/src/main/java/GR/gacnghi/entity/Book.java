@@ -12,6 +12,9 @@ public class Book {
     @Column(name="id")
     private int id;
 
+    @Column(name="name")
+    private String name;
+
     @Column(name="title")
     private String title;
 
@@ -34,8 +37,13 @@ public class Book {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
+    public Book(){
+        super();
+    }
+
     //define constructors
-    public Book(String title, String author, String description, String image, String content, String status, Date createdAt) {
+    public Book(String name, String title, String author, String description, String image, String content, String status, Date createdAt) {
+        this.name = name;
         this.title = title;
         this.author = author;
         this.description = description;
@@ -46,6 +54,23 @@ public class Book {
     }
 
     //define getter,setter
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -107,6 +132,7 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", status='" + status + '\'' +

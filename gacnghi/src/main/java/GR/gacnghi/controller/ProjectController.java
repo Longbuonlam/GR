@@ -30,5 +30,8 @@ public class ProjectController {
         return "admin";
     }
 
-
+    @GetMapping("gacnghi.addbook")
+    public String AddBookPage(){
+        return "AddBook";
+    }
 }

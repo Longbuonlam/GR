@@ -21,7 +21,7 @@
             </div>
         </li>
         <li><a href="#">Kho sách</a></li>
-        <li><a href="#">Thêm Sách</a></li>
+        <li><a href="gacnghi.addbook">Thêm Sách</a></li>
         <li><a href="#">Diễn Đàn</a></li>
     </ul>
     <div class="search-bar">
@@ -44,6 +44,7 @@
         <thead>
         <tr>
             <th scope="col">Id</th>
+            <th scope="col">Name</th>
             <th scope="col">Title</th>
             <th scope="col">Author</th>
             <th scope="col">Action</th>
@@ -52,6 +53,7 @@
         <tbody>
         <tr th:each="book :${book}">
             <td th:text="${book.id}"></td>
+            <td th:text="${book.name}"></td>
             <td th:text="${book.title}"></td>
             <td th:text="${book.author}"></td>
             <td>

@@ -118,3 +118,45 @@ nav ul li:hover .dropdown-menu ul li a:hover{
     margin-top: 20px;
     font-size: 1.2em;
 }
+
+.book-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 70px 0;   /*khoang cach toi dong chu*/
+}
+
+.book {
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #ccc; /* Border added */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Background color added */
+}
+
+
+.book p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+}
+
+.book1 {
+    width: 220px; /* Adjust the width as needed */
+    height: 220px; /* Adjust the height as needed */
+    border-radius: 8px;
+}
+
+.book2 {
+    width: 330px; /* Adjust the width as needed */
+    height: 220px; /* Adjust the height as needed */
+    border-radius: 8px;
+}
+
+.book3 {
+    width: 220px; /* Adjust the width as needed */
+    height: 220px; /* Adjust the height as needed */
+    border-radius: 8px;
+}

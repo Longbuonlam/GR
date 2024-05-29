@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/AddBook.css">
+    <title>Gác Nghỉ</title>
+</head>
+<body>
+<nav>
+    <label class = "logo">Gác Nghỉ</label>
+    <ul>
+        <li><a href="#">Chỉnh sửa</a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="gacnghi.admin.user_list">Người dùng</a></li>
+                    <li><a href="gacnghi.admin.book_list">Thư viện</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Kho sách</a></li>
+        <li><a href="gacnghi.addbook">Thêm Sách</a></li>
+        <li><a href="#">Diễn Đàn</a></li>
+    </ul>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <img src="/images/search.png" alt="Search Icon" class="search-icon">
+    </div>
+    <div>
+        <ul class="logout">
+            <li><a href="gacnghi.login">Đăng xuất</a>
+        </ul>
+    </div>
+</nav>
+<div class="welcome">
+    <h1>Thêm Sách</h1>
+</div>
+<div class="container">
+    <div class="form-container">
+        <form th:action="@{/addBook}" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-control" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id="title" class="form-control" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" id="author" class="form-control" name="author">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" id="description" class="form-control" name="description">
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content</label>
+                <input type="text" id="content" class="form-control" name="content">
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <input type="text" id="status" class="form-control" name="status">
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Cover Image</label>
+                <input type="file" id="image"  name="image" accept="image/*">
+            </div>
+            <div class="mb-3">
+                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; width: 100%; height: auto;"/>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

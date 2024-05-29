@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -17,7 +20,8 @@ public class BookController {
 
     @PostMapping("/addBook")
     public String addBook(@ModelAttribute Book book) {
-        book.setStatus("Undone");
+        final Date current = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
+        book.setCreatedAt(current);
         service.save(book);
         System.out.println("Save new book to database: " + book);
         return "redirect:/gacnghi.admin.book_list";
@@ -38,6 +42,9 @@ public class BookController {
 
     @PostMapping("/saveEditBook")
     public String saveEditBook(@ModelAttribute Book book) {
+        Date update =new Date();
+        update = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
+        book.setCreatedAt(update);
         service.save(book);
         return "redirect:/gacnghi.admin.book_list";
     }

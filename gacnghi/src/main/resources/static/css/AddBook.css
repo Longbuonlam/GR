@@ -97,7 +97,7 @@ nav ul li:hover .dropdown-menu ul li a:hover{
 .search-bar{
     display: flex;
     align-items: center;
-    margin-left: 210px;    /*Tuy chinh search-bar ra xa bao nhieu de phu hop*/
+    margin-left: 60px;
     margin-top: 10px;
 }
 
@@ -109,9 +109,9 @@ nav ul li:hover .dropdown-menu ul li a:hover{
 }
 
 .search-bar .search-icon {
-    width: 20px; 
-    height: auto; 
-    cursor: pointer; 
+    width: 20px;
+    height: auto;
+    cursor: pointer;
 }
 
 .welcome {
@@ -120,48 +120,54 @@ nav ul li:hover .dropdown-menu ul li a:hover{
     font-size: 1.2em;
 }
 
-.logout {
-    margin-left: 40px;
+.container {
+    margin: 20px auto;
+    margin-top: 40px;
+    width: 50%;
 }
 
-.book-display {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 70px 0;   /*khoang cach toi dong chu*/
+.form-container {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-.book {
-    margin: 15px;
+.text-center {
     text-align: center;
-    border: 1px solid #ccc; /* Border added */
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9; /* Background color added */
 }
 
+.mb-3 {
+    margin-bottom: 1rem;
+}
 
-.book p {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #333;
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.btn-submit {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 300px;
     cursor: pointer;
 }
 
-.book1 {
-    width: 220px; /* Adjust the width as needed */
-    height: 220px; /* Adjust the height as needed */
-    border-radius: 8px;
-}
-
-.book2 {
-    width: 330px; /* Adjust the width as needed */
-    height: 220px; /* Adjust the height as needed */
-    border-radius: 8px;
-}
-
-.book3 {
-    width: 220px; /* Adjust the width as needed */
-    height: 220px; /* Adjust the height as needed */
-    border-radius: 8px;
+.btn-submit:hover {
+    background-color: #8e44ad;
 }
