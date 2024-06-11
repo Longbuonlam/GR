@@ -4,23 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/BookEdit.css">
+    <link rel="stylesheet" href="/css/AddBook.css">
     <title>Gác Nghỉ</title>
 </head>
 <body>
 <nav>
-    <label class = "logo">Gác Nghỉ</label>
+    <label class="logo">Gác Nghỉ</label>
     <ul>
-        <li><a href="#">Chỉnh sửa</a>
+        <li><a href="#">Tài khoản</a>
             <div class="dropdown-menu">
                 <ul>
-                    <li><a href="gacnghi.admin.user_list">Người dùng</a></li>
-                    <li><a href="gacnghi.admin.book_list">Thư viện</a></li>
+                    <li><a href="#">Người dùng</a></li>
+                    <li><a href="#">Admin</a></li>
                 </ul>
             </div>
         </li>
         <li><a href="#">Kho sách</a></li>
-        <li><a href="gacnghi.addbook">Thêm Sách</a></li>
+        <li><a href="#">Thêm Sách</a></li>
         <li><a href="#">Diễn Đàn</a></li>
     </ul>
     <div class="search-bar">
@@ -28,55 +28,52 @@
         <img src="/images/search.png" alt="Search Icon" class="search-icon">
     </div>
     <div>
-        <ul>
-            <li><a href="gacnghi.login">Đăng xuất</a>
+        <ul class="logout">
+            <li><a href="#">Đăng xuất</a></li>
         </ul>
     </div>
 </nav>
-
-<div class = "center">
-    <h1>Edit Book</h1>
-    <form th:action="@{/saveEditBook}" method="post" th:object="${book}">
-        <input type="hidden" name="id" th:value="${book.id}"/>
-        <div class = "txt_field">
-            <input type = "text" name = "name" th:value="${book.name}" required>
-            <span></span>
-            <label >Name</label>
-        </div>
-        <div class = "txt_field">
-            <input type = "text" name = "title" th:value="${book.title}" required>
-            <span></span>
-            <label >Title</label>
-        </div>
-        <div class = "txt_field">
-            <input type = "text" name = "author" th:value="${book.author}" required>
-            <span></span>
-            <label>Author</label>
-        </div>
-        <div class = "txt_field">
-            <input type = "text" name = "description" th:value="${book.description}" required>
-            <span></span>
-            <label>Description</label>
-        </div>
-        <div class = "txt_field">
-            <input type = "text" name = "status" th:value="${book.status}" required>
-            <span></span>
-            <label>Status</label>
-        </div>
-        <div class = "txt_field">
-            <input type = "text" name = "Image" th:value="${book.image}" required>
-            <span></span>
-            <label>Image</label>
-        </div>
-        <div class = "txt_field">
-            <input type = "text" name = "content" th:value="${book.content}" required>
-            <span></span>
-            <label>Content</label>
-        </div>
-        <input type = "submit" value = "Submit">
-
-    </form>
+<div class="welcome">
+    <h1>Chỉnh sửa Sách</h1>
 </div>
-
+<div class="container">
+    <div class="form-container">
+        <form th:action="@{/saveEditBook}" method="post" th:object="${book}">
+            <input type="hidden" name="id" th:value="${book.id}"/>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-control" name = "name" th:value="${book.name}" required>
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id="title" class="form-control" name = "title" th:value="${book.title}" required>
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" id="author" class="form-control" name = "author" th:value="${book.author}" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" id="description" class="form-control" name = "description" th:value="${book.description}" required>
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content</label>
+                <input type="text" id="content" class="form-control" name = "content" th:value="${book.content}">
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <input type="text" id="status" class="form-control" name = "status" th:value="${book.status}" required>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Cover Image</label>
+                <input type="text" id="image" class="form-control" name = "Image" th:value="${book.image}" required>
+            </div>
+            <div class="mb-3">
+                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; width: 100%; height: auto;"/>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

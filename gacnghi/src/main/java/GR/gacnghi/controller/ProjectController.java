@@ -30,8 +30,13 @@ public class ProjectController {
         return "admin";
     }
 
-    @GetMapping("gacnghi.addbook")
+    @GetMapping("/gacnghi.addbook")
     public String AddBookPage(){
         return "AddBook";
+    }
+
+    @GetMapping("/gacnghi/access-denied")
+    public String AccessDeniedPage(){
+        return "access-denied";
     }
 }

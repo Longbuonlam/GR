@@ -48,5 +48,11 @@ public class UserController{
         service.deleteById(id);
         return "redirect:/gacnghi.admin.user_list";
     }
+
+    @GetMapping("/api/userinfo")
+    @ResponseBody
+    public User getUserInfo(@RequestParam String username){
+        return  service.findByName(username);
+    }
     
 }

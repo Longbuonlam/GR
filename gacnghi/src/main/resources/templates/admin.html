@@ -54,5 +54,13 @@
     </div>
 
 </div>
+<script>
+    // Lấy role từ localStorage
+    const role = localStorage.getItem('role');
+
+    if (role !== 'ADMIN') {
+        window.location.href = '/gacnghi/access-denied';
+    }
+</script>
 </body>
 </html>
