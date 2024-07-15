@@ -26,7 +26,7 @@
             Not a member? <a href = "gacnghi.signup">Sign Up Here</a>
         </div>
     </form>
-    <div id="errorMessage" style="color: red; margin-right: 170px;"></div>
+    <div id="errorMessage" style="color: red; margin-right: 205px;"></div>
 </div>
 <script src = "/js/loginform.js"></script>
 <script>
@@ -47,11 +47,11 @@
                     window.location.href = '/gacnghi.vn';
                 }
             } else {
-                document.getElementById('errorMessage').textContent = 'Invalid password';
+                document.getElementById('errorMessage').textContent = 'Invalid username or password';
             }
         })
         .catch(error => {
-            document.getElementById('errorMessage').textContent = "Username doesn't exist";
+            document.getElementById('errorMessage').textContent = "Invalid username or password";
         });
 });
 </script>
